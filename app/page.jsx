@@ -16,7 +16,7 @@ const Page = () => {
             <h1>Software Developer</h1>
             <h1 className="text-[48px] font-primary lg:text-[65px] font-semibold leading-[1.1]">
               Hello I'm <br />
-              <span className="text-accent">M.Ali Usman</span>
+              <span className="text-accent">Muhammad Ali Usman</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               I excel at crafting elegant digital experiences and I am
