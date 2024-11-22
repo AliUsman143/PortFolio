@@ -1,95 +1,261 @@
 "use client";
 import React, { useState } from "react";
-
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+const experi = [
+  {
+    year: "2024 - Present",
+    dev: "Next Js",
+    int: "Tech Solution Inc.",
+  },
+  {
+    year: "2023 - Present",
+    dev: "HTML CSS",
+    int: "Tech Solution Inc.",
+  },
+  {
+    year: "2023 - Present",
+    dev: "Bootstrap5",
+    int: "Tech Solution Inc.",
+  },
+  {
+    year: "2023 - Present",
+    dev: "TailWind CSS",
+    int: "Tech Solution Inc.",
+  },
+  {
+    year: "2023 - Present",
+    dev: "Full Stack Developer",
+    int: "Tech Solution Inc.",
+  },
+];
+const education = [
+  {
+    year: "2019 - 20",
+    deg: "Matric",
+    mark: "Marks: 1019",
+    school: "Workers Welfare School",
+  },
+  {
+    year: "2021 - 22",
+    deg: "Inter",
+    mark: "Marks: 996",
+    school: "The New City School",
+  },
+  {
+    year: "2012 - Present",
+    deg: "BSCS( Computer Science )",
+    mark: "CGPA: 3.57",
+    school: "National Textile University",
+  },
+];
+const about = [
+  {
+    name: "Muhammad Ali Usman",
+    fname: "Ijaz Ahmad",
+    phone: "(+92) 305-1023906",
+    dob: "25-12-2003",
+    cnic: "33101-8848463-9",
+    nationality: "Muslim",
+    Religion: "Islam",
+    addess: "Chak Jhumra, Faisal Town",
+  },
+];
 const Resume = () => {
   const [activeTab, setActiveTab] = useState("education");
 
   const tabs = [
-    { id: "education", label: "Education" },
     { id: "experience", label: "Experience" },
+    { id: "education", label: "Education" },
     { id: "skills", label: "Skills" },
     { id: "about", label: "About Me" },
   ];
 
   const tabContent = {
-    education: (
-      <table className="w-full text-left">
-        <thead>
-          <tr className="border-b">
-            <th className="py-2">Degree</th>
-            <th className="py-2">Institution</th>
-            <th className="py-2">Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Bachelor's in Computer Science</td>
-            <td>XYZ University</td>
-            <td>2020-2024</td>
-          </tr>
-          <tr>
-            <td>Intermediate</td>
-            <td>ABC College</td>
-            <td>2018-2020</td>
-          </tr>
-        </tbody>
-      </table>
-    ),
     experience: (
-      <table className="w-full text-left">
-        <thead>
-          <tr className="border-b">
-            <th className="py-2">Position</th>
-            <th className="py-2">Company</th>
-            <th className="py-2">Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Frontend Developer</td>
-            <td>ABC Solutions</td>
-            <td>2023-Present</td>
-          </tr>
-          <tr>
-            <td>Intern</td>
-            <td>XYZ Tech</td>
-            <td>2022</td>
-          </tr>
-        </tbody>
-      </table>
+      <div className="text-left max-w-full mx-auto ">
+        <h2 className="text-3xl  font-semibold mb-4">My Experience</h2>
+        <p className="mb-6">
+          I worked as a web developer. I have done many projects. I’m expert in
+          Html, Css, Javascript, Bootstrap5. Now, I am working on Next Js
+          Projects.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-y-scroll max-h-[400px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-800">
+          {experi.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="p-5 bg-[#232229] rounded-lg shadow-lg"
+              >
+                <div className="text-xs text-accent mb-2">{item.year}</div>
+                <div className="text-white font-semibold">{item.dev}</div>
+                <div className="text-xs text-gray-500">
+                  <span className="text-accent text-xl">•</span> {item.int}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    ),
+    education: (
+      <div className="text-left max-w-full mx-auto ">
+        <h2 className="text-3xl  font-semibold mb-4">My Education</h2>
+        <p className="">
+          Learned a lot from this institute including time management, effective
+          communication, discipline etc.
+        </p>
+        <p className="mb-6">
+          Graduating with high grades my CGPA till now is 3.67.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-y-scroll max-h-[400px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-800">
+          {education.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="p-5 bg-[#232229] rounded-lg shadow-lg"
+              >
+                <div className="text-xs text-accent mb-2">{item.year}</div>
+                <div className="text-white font-semibold">{item.deg}</div>
+                <div className="text-white font-semibold">{item.mark}</div>
+                <div className="text-xs text-gray-500">
+                  <span className="text-accent text-xl">•</span> {item.school}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     ),
     skills: (
-      <ul className="list-disc list-inside">
-        <li>JavaScript</li>
-        <li>React.js</li>
-        <li>Next.js</li>
-        <li>HTML & CSS</li>
-        <li>Tailwind CSS</li>
-      </ul>
+      <div className="text-left max-w-full mx-auto ">
+        <h2 className="text-3xl  font-semibold mb-4">My Skills</h2>
+        <p className="mb-6">
+          I have a lot of skills in Web Developement like Html, Css, Bootstrip5,
+          TailwindCss, Flow Bit, Flow Element, Javascript. Now, I am working on
+          Next Js Projects.
+        </p>
+        {/* tooltips  */}
+        <div className="flex flex-wrap  gap-6">
+          <Tooltip title="html" placement="top">
+            <img
+              src="assets/skills/html.svg"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+          <Tooltip title="Css" placement="top">
+            <img
+              src="assets/skills/css.svg"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+          <Tooltip title="Tailwind" placement="top">
+            <img
+              src="assets/skills/tailwind.svg"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+          <Tooltip title="Js" placement="top">
+            <img
+              src="assets/skills/js.svg"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+          <Tooltip title="React" placement="top">
+            <img
+              src="assets/skills/react.svg"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+          <Tooltip title="Next Js" placement="top">
+            <img
+              src="assets/skills/next.svg"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+        </div>
+      </div>
     ),
     about: (
-      <p className="text-left">
-        Hello! I'm a passionate web developer with a keen interest in building
-        dynamic and interactive user interfaces. I love learning new
-        technologies and improving my skills continuously.
-      </p>
+      <div className="text-left max-w-full mx-auto ">
+        <h2 className="text-3xl  font-semibold mb-4">About Me</h2>
+        <p className="">
+          Learned a lot from this institute including time management, effective
+          communication, discipline etc.
+        </p>
+
+        {about.map((item, index) => {
+          return (
+            <div key={index}>
+              {/* name fname  */}
+              <div className="flex lg:flex-row flex-col gap-1 mt-5 lg:gap-16 ">
+                <div>
+                  <span className="text-gray-400">Name: </span>
+                  {item.name}
+                </div>
+                <div>
+                  <span className="text-gray-400">FName: </span>
+                  {item.fname}
+                </div>
+              </div>
+              {/* mbl  dop  */}
+              <div className="flex lg:flex-row flex-col gap-1  lg:gap-16 ">
+                <div>
+                  <span className="text-gray-400">Phone: </span>
+                  {item.phone}
+                </div>
+                <div>
+                  <span className="text-gray-400">Date of Birth: </span>
+                  {item.dob}
+                </div>
+              </div>
+              {/* cnic nationality  */}
+              <div className="flex lg:flex-row flex-col gap-1  lg:gap-20 ">
+                <div>
+                  <span className="text-gray-400">CNIC: </span>
+                  {item.cnic}
+                </div>
+                <div className="lg:pl-3">
+                  <span className="text-gray-400">Nationality: </span>
+                  {item.nationality}
+                </div>
+              </div>
+              {/* Religion addes  */}
+              <div className="flex lg:flex-row flex-col gap-1  lg:gap-36 ">
+                <div>
+                  <span className="text-gray-400">Religion: </span>
+                  {item.Religion}
+                </div>
+                <div className="lg:pl-2">
+                  <span className="text-gray-400">Address: </span>
+                  {item.addess}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     ),
   };
 
   return (
-    <section className="py-12">
+    <section className="py-5">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6">Resume</h2>
-
         {/* Flexbox layout */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Tabs Section */}
-          <div className="flex flex-col gap-4 lg:w-1/4">
+          <div className="flex flex-col gap-4 text-center rounded-xl">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-lg text-left ${
+                className={`px-4 py-2 lg:w-[26vw] items-center rounded-xl font-semibold text-xl ${
                   activeTab === tab.id
                     ? "bg-accent text-white"
                     : "bg-gray-200 text-gray-600 hover:bg-accent hover:text-white"
@@ -101,7 +267,7 @@ const Resume = () => {
           </div>
 
           {/* Content Section */}
-          <div className="bg-primary p-6 rounded-lg shadow-md lg:w-3/4">
+          <div className="bg-primary   mx-auto  px-6  rounded-lg">
             {tabContent[activeTab]}
           </div>
         </div>
