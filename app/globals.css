@@ -7,3 +7,6 @@
     @apply font-primary bg-primary text-white leading-loose;
   }
 }
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";

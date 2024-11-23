@@ -13,7 +13,7 @@ const Headersection = () => {
       <div className="container mx-auto  flex justify-between items-center">
         {/* logo  */}
         <Link href="/">
-          <h1 className="md:text-4xl sm:text-3xl  text-2xl font-semibold">
+          <h1 className="md:text-4xl sm:text-3xl  text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from from-purple-400 to-pink-600">
             M.Ali Usman<span className="text-accent">.</span>
           </h1>
         </Link>
