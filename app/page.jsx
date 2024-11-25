@@ -14,7 +14,7 @@ const Page = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between  ">
           <div className="lg:order-1 order-2">
             <h1>Software Developer</h1>
-            <h1 className="text-[48px] font-primary lg:text-[65px] font-semibold leading-[1.1]">
+            <h1 className="text-[40px] font-primary lg:text-[50px] font-semibold leading-[1.1]">
               Hello I'm <br />
               <span className=" text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-600 ">
                 Muhammad Ali Usman

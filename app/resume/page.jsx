@@ -194,49 +194,46 @@ const Resume = () => {
           return (
             <div key={index}>
               {/* name fname  */}
-              <div className="flex lg:flex-row flex-col gap-1 mt-5 lg:gap-16 ">
+              <div className="grid lg:grid-cols-2 grid-cols-1 mt-4">
                 <div>
-                  <span className="text-gray-400">Name: </span>
-                  {item.name}
+                  <div>
+                    <span className="text-gray-400">Name: </span>
+                    {item.name}
+                  </div>
+                  <div>
+                    <span className="text-gray-400">Phone: </span>
+                    {item.phone}
+                  </div>
+                  <div>
+                    <span className="text-gray-400">CNIC: </span>
+                    {item.cnic}
+                  </div>
+                  <div>
+                    <span className="text-gray-400">Religion: </span>
+                    {item.Religion}
+                  </div>
                 </div>
                 <div>
-                  <span className="text-gray-400">FName: </span>
-                  {item.fname}
+                  {" "}
+                  <div>
+                    <span className="text-gray-400 ">Fname: </span>
+                    {item.fname}
+                  </div>
+                  <div>
+                    <span className="text-gray-400 ">Date of Birth: </span>
+                    {item.dob}
+                  </div>
+                  <div className="">
+                    <span className="text-gray-400">Nationality: </span>
+                    {item.nationality}
+                  </div>
+                  <div className="">
+                    <span className="text-gray-400">Address: </span>
+                    {item.addess}
+                  </div>
                 </div>
               </div>
-              {/* mbl  dop  */}
-              <div className="flex lg:flex-row flex-col gap-1  lg:gap-16 ">
-                <div>
-                  <span className="text-gray-400">Phone: </span>
-                  {item.phone}
-                </div>
-                <div>
-                  <span className="text-gray-400">Date of Birth: </span>
-                  {item.dob}
-                </div>
-              </div>
-              {/* cnic nationality  */}
-              <div className="flex lg:flex-row flex-col gap-1  lg:gap-20 ">
-                <div>
-                  <span className="text-gray-400">CNIC: </span>
-                  {item.cnic}
-                </div>
-                <div className="lg:pl-3">
-                  <span className="text-gray-400">Nationality: </span>
-                  {item.nationality}
-                </div>
-              </div>
-              {/* Religion addes  */}
-              <div className="flex lg:flex-row flex-col gap-1  lg:gap-36 ">
-                <div>
-                  <span className="text-gray-400">Religion: </span>
-                  {item.Religion}
-                </div>
-                <div className="lg:pl-2">
-                  <span className="text-gray-400">Address: </span>
-                  {item.addess}
-                </div>
-              </div>
+             
             </div>
           );
         })}
@@ -255,7 +252,7 @@ const Resume = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 lg:w-[26vw] items-center rounded-xl font-semibold text-xl ${
+                className={`px-4 py-2 lg:w-[26vw] items-center rounded-xl  text-xl ${
                   activeTab === tab.id
                     ? "bg-accent text-white"
                     : "bg-gray-200 text-gray-600 hover:bg-accent hover:text-white"
