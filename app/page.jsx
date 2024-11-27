@@ -1,11 +1,11 @@
 "use client";
 
-import Button from "@/components/ui/button";
+import Button from "../app/components/ui/button";
 import React from "react";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
-import IconSocial from "@/components/ui/IconSocial";
+import IconSocial from "../app/components/ui/IconSocial";
 import { motion } from "framer-motion";
-import Countproject from "@/components/Countproject";
+import Countproject from "../app/components/Countproject";
 
 const Page = () => {
   return (

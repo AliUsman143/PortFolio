@@ -1,8 +1,8 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Headersection from "@/components/Headersection";
-import PageTranstion from "@/components/PageTranstion";
-import StarTranstion from "@/components/StarTranstion";
+import Headersection from "../app/components/Headersection";
+import PageTranstion from "../app/components/PageTranstion";
+import StarTranstion from "../app/components/StarTranstion";
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetBrainsMono",

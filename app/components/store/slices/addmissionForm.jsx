@@ -1,4 +1,4 @@
-import { formatAdmissionDate, getCurrentDate } from "@/app/utils/other";
+import { formatAdmissionDate, getCurrentDate } from "@/components/utils/datatime";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -8,6 +8,7 @@ const initialState = {
     email: "",
     tel: "+92-",
     admissionDate: formatAdmissionDate(getCurrentDate()),
+    course: { title: "" },
     course: { title: "" },
     gender: "",
     checkbox: "",

@@ -1,6 +1,8 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
+import { TextareaAutosize } from "@mui/material";
+import Button from "../components/ui/button";
+import { Input } from "../components/ui/input";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
@@ -30,9 +32,6 @@ const courses = [
   { label: "Cybersecurity" },
 ];
 
-import React from "react";
-import { TextareaAutosize } from "@mui/material";
-import Button from "@/components/ui/button";
 
 const page = () => {
   return (
