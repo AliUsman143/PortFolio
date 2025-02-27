@@ -25,12 +25,15 @@ const Page = () => {
               proficient in various programming languages and technologies.
             </p>
             <div className="lg:flex-row flex-col flex items-center gap-7">
-              <Button
-                text="Download CV"
-                className="border-2 border-accent capitalize bg-primary text-accent hover:bg-accent hover:text-white hover:scale-105 duration-700 "
+              <a
+                href="https://drive.google.com/uc?export=download&id=1O09vHl4L3_2gfCVaPPDnqywOaR7UaaeZ"
+                download="My_CV.pdf"
+                className="border-2 rounded-3xl border-accent capitalize bg-primary text-accent hover:bg-accent hover:text-white hover:scale-105 duration-700 px-4 py-2 flex items-center gap-2"
               >
-                <DownloadRoundedIcon className="pl-2 text-3xl" />
-              </Button>
+                Download CV
+                <DownloadRoundedIcon className="text-3xl" />
+              </a>
+
               <IconSocial
                 containerstyle="flex lg:gap-6 gap-3 lg:mb-0 mb-10"
                 iconstyle="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"

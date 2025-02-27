@@ -4,71 +4,129 @@ import Slider from "react-slick";
 import Link from "next/link";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Tooltip from '@mui/material/Tooltip';
+import Tooltip from "@mui/material/Tooltip";
 const workData = [
   {
     id: "01",
-    image: "/assets/work/author.png", // Replace with your image path
+    image: "/assets/work/dawat.png", // Replace with your image path
     title: "Frontend Project",
     description:
-      "The website showcases a collection of quotes from famous authors. It offers a user-friendly interface to explore quotes by author.",
-    stack: [{ name: "HTML5" }, { name: "CSS3" },{ name: "Tailwind" },{ name: "Next Js" }],
+      "This website offer comprehensive courses that nurture both spiritual growth and practical understanding of Islam, guiding students to lead purposeful, peaceful lives.",
+    stack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Tailwind" },
+      { name: "Next Js" },
+    ],
     live: "",
     github: "",
   },
   {
     id: "02",
-    image: "/assets/work/brith.png", // Replace with your image path
+    image: "/assets/work/voiceflex.png", // Replace with your image path
     title: "Frontend Project",
-    description: "The website appears to be a platform dedicated to showcasing about Brithish Institute , primarily in the fields of science and spirituality.",
+    description:
+      "The platform leverages advanced AI technologies to transform and translate voices across multiple languages with precision and speed. Experience seamless voice-to-voice translations, making global communication effortless and engaging.",
     stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" }],
     live: "",
     github: "",
   },
+
   {
     id: "03",
     image: "/assets/work/netflix.png", // Replace with your image path
     title: "Frontend Project",
-    description: "This website shows the Netflix homepage, offering unlimited access to movies, TV shows, and more, with a simple sign-up process.",
-    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" },{ name: "Next Js" }],
+    description:
+      "This website shows the Netflix homepage, offering unlimited access to movies, TV shows, and more, with a simple sign-up process.",
+    stack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Tailwind" }
+      
+    ],
     live: "",
-    github: "",
+    github: "https://github.com/AliUsman143/Netflix-clone",
   },
   {
     id: "04",
     image: "/assets/work/dev.png", // Replace with your image path
     title: "Frontend Project",
-    description: "This website Devkuns, which focuses on providing resources for developers, such as documentation, tutorials, and courses.",
+    description:
+      "This website Devkuns, which focuses on providing resources for developers, such as documentation, tutorials, and courses.",
     stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" }],
     live: "",
-    github: "",
+    github: "https://github.com/AliUsman143/Devkuns",
   },
   {
     id: "05",
     image: "/assets/work/hugo.png", // Replace with your image path
     title: "Frontend Project",
-    description: "This website  Hugoplate, built with Hugo and TailwindCSS. It's designed to help users quickly start their own Hugo projects.",
-    stack: [{ name: "HTML5" }, { name: "CSS3" },  { name: "Tailwind" }],
+    description:
+      "This website  Hugoplate, built with Hugo and TailwindCSS. It's designed to help users quickly start their own Hugo projects.",
+    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" }],
     live: "",
-    github: "",
+    github: "https://github.com/AliUsman143/Hugoplate_templete",
   },
   {
     id: "06",
     image: "/assets/work/pinwheel.png", // Replace with your image path
     title: "Frontend Project",
-    description: "This website  PinWeel, which offers solutions for scaling design and development operations. It specifically mentions Avocode Enterprise.",
-    stack: [{ name: "HTML5" }, { name: "CSS3" },  { name: "Tailwind" }],
+    description:
+      "This website  PinWeel, which offers solutions for scaling design and development operations. It specifically mentions Avocode Enterprise.",
+    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" }],
     live: "",
-    github: "",
+    github: "https://github.com/AliUsman143/landwind-templete",
   },
   {
     id: "07",
+    image: "/assets/work/windland.png", // Replace with your image path
+    title: "Frontend Project",
+    description:
+      "This website  PinWeel, which offers solutions for scaling design and development operations. It specifically mentions Avocode Enterprise.",
+    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" }],
+    live: "",
+    github: "https://github.com/AliUsman143/landwind-templete",
+  },
+  {
+    id: "08",
     image: "/assets/work/thapa.png", // Replace with your image path
     title: "Frontend Project",
-    description: "This website appears to be a movie streaming platform called ThapaFlix. It invites users to watch movies together, offering a variety of genres from dramas to action.",
-    stack: [{ name: "HTML5" }, { name: "CSS3" },  { name: "Tailwind" },{ name: "Next Js" }],
+    description:
+      "This website appears to be a movie streaming platform called ThapaFlix. It invites users to watch movies together, offering a variety of genres from dramas to action.",
+    stack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Tailwind" },
+      { name: "Next Js" },
+    ],
     live: "",
-    github: "",
+    github: "https://github.com/AliUsman143/thapaflix-movietemplete",
+  },
+
+  {
+    id: "09",
+    image: "/assets/work/author.png", // Replace with your image path
+    title: "Frontend Project",
+    description:
+      "The website showcases a collection of quotes from famous authors. It offers a user-friendly interface to explore quotes by author.",
+    stack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Tailwind" },
+      { name: "Next Js" },
+    ],
+    live: "",
+    github: "https://github.com/AliUsman143/Author_Website",
+  },
+  {
+    id: "10",
+    image: "/assets/work/brith.png", // Replace with your image path
+    title: "Frontend Project",
+    description:
+      "The website appears to be a platform dedicated to showcasing about Brithish Institute , primarily in the fields of science and spirituality.",
+    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" }],
+    live: "",
+    github: "https://github.com/AliUsman143/British-Institute",
   },
 ];
 
@@ -163,6 +221,8 @@ const WorkSection = () => {
             <div>
               <Link
                 href={workData[activeSlide].github}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white group-hover:text-accent hover:scale-110"
               >
                 <Tooltip title="Github" placement="top">

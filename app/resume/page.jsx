@@ -45,7 +45,7 @@ const education = [
   {
     year: "2012 - Present",
     deg: "BSCS( Computer Science )",
-    mark: "CGPA: 3.57",
+    mark: "CGPA: 3.74",
     school: "National Textile University",
   },
 ];
@@ -76,10 +76,12 @@ const Resume = () => {
       <div className="text-left max-w-full mx-auto ">
         <h2 className="text-3xl  font-semibold mb-4">My Experience</h2>
         <p className="mb-6">
-          I worked as a web developer. I have done many projects. I’m expert in
-          Html, Css, Javascript, Bootstrap5. Now, I am working on Next Js
-          Projects.
+          I worked as a <span className="font-bold text-accent">Web Developer</span> at <span className="font-bold text-accent">Cyverix Software House</span>,
+          contributing to several projects. I have expertise in <span className="font-bold text-accent">HTML, CSS, Bootstrap 5, Tailwind CSS,
+          JavaScript, React.js </span>. Currently, I am working on <span className="font-bold text-accent">Next.js projects</span>, focusing on modern web development and performance
+          optimization.
         </p>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-y-scroll max-h-[400px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-800">
           {experi.map((item, index) => {
             return (
@@ -233,7 +235,6 @@ const Resume = () => {
                   </div>
                 </div>
               </div>
-             
             </div>
           );
         })}
