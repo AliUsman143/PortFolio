@@ -21,9 +21,12 @@ const Page = () => {
               </span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
+              I am a passionate Next.js developer with expertise in building
+              fast, scalable, and user-friendly web applications. I specialize
+              in crafting seamless UI/UX experiences and optimizing performance
+              for modern web solutions.
             </p>
+
             <div className="lg:flex-row flex-col flex items-center gap-7">
               <a
                 href="https://drive.google.com/uc?export=download&id=1O09vHl4L3_2gfCVaPPDnqywOaR7UaaeZ"

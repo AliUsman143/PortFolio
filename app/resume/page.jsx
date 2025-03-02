@@ -76,10 +76,16 @@ const Resume = () => {
       <div className="text-left max-w-full mx-auto ">
         <h2 className="text-3xl  font-semibold mb-4">My Experience</h2>
         <p className="mb-6">
-          I worked as a <span className="font-bold text-accent">Web Developer</span> at <span className="font-bold text-accent">Cyverix Software House</span>,
-          contributing to several projects. I have expertise in <span className="font-bold text-accent">HTML, CSS, Bootstrap 5, Tailwind CSS,
-          JavaScript, React.js </span>. Currently, I am working on <span className="font-bold text-accent">Next.js projects</span>, focusing on modern web development and performance
-          optimization.
+          I worked as a{" "}
+          <span className="font-bold text-accent">Web Developer</span> at{" "}
+          <span className="font-bold text-accent">Cyverix Software House</span>,
+          contributing to several projects. I have expertise in{" "}
+          <span className="font-bold text-accent">
+            HTML, CSS, Bootstrap 5, Tailwind CSS, JavaScript, React.js{" "}
+          </span>
+          . Currently, I am working on{" "}
+          <span className="font-bold text-accent">Next.js projects</span>,
+          focusing on modern web development and performance optimization.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-y-scroll max-h-[400px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-800">
@@ -133,22 +139,45 @@ const Resume = () => {
       <div className="text-left max-w-full mx-auto ">
         <h2 className="text-3xl  font-semibold mb-4">My Skills</h2>
         <p className="mb-6">
-          I have a lot of skills in Web Developement like Html, Css, Bootstrip5,
-          TailwindCss, Flow Bit, Flow Element, Javascript. Now, I am working on
-          Next Js Projects.
+          I have a lot of skills in Web Developement like Nextjs, Reactjs,
+          JavaScript, Dynamic Data Handling, Redux-Toolkit, Material UI, Shadcn,
+          Tailwind Css, Flow Bit, Flow Element, Bootstrip5, Html 5, Css . Now, I
+          am working on Next Js Projects.
         </p>
         {/* tooltips  */}
         <div className="flex flex-wrap  gap-6">
-          <Tooltip title="html" placement="top">
+          <Tooltip title="Next Js" placement="top">
             <img
-              src="assets/skills/html.svg"
+              src="assets/skills/next.svg"
               alt=""
               className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
             />
           </Tooltip>
-          <Tooltip title="Css" placement="top">
+          <Tooltip title="React Js" placement="top">
             <img
-              src="assets/skills/css.svg"
+              src="assets/skills/react.svg"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+          <Tooltip title="JavaScript" placement="top">
+            <img
+              src="assets/skills/js.svg"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+
+          <Tooltip title="Redux-Toolkit" placement="top">
+            <img
+              src="assets/skills/redux.png"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip>
+          <Tooltip title="Shadcn" placement="top">
+            <img
+              src="assets/skills/chadcn.png"
               alt=""
               className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
             />
@@ -160,23 +189,31 @@ const Resume = () => {
               className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
             />
           </Tooltip>
-          <Tooltip title="Js" placement="top">
+          {/* <Tooltip title="FlowBite" placement="top">
             <img
-              src="assets/skills/js.svg"
+              src="assets/skills/flowbite.png"
+              alt=""
+              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
+            />
+          </Tooltip> */}
+          <Tooltip title="Bootstrip5" placement="top">
+            <img
+              src="assets/skills/bot.png"
               alt=""
               className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
             />
           </Tooltip>
-          <Tooltip title="React" placement="top">
+
+          <Tooltip title="html" placement="top">
             <img
-              src="assets/skills/react.svg"
+              src="assets/skills/html.svg"
               alt=""
               className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
             />
           </Tooltip>
-          <Tooltip title="Next Js" placement="top">
+          <Tooltip title="Css" placement="top">
             <img
-              src="assets/skills/next.svg"
+              src="assets/skills/css.svg"
               alt=""
               className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
             />

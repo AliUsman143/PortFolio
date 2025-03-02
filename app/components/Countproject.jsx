@@ -7,11 +7,11 @@ const countpro = [
     text: "Years of experience",
   },
   {
-    num: 25,
+    num: 15,
     text: "Project complete",
   },
   {
-    num: 9,
+    num: 11,
     text: "Technologies masters",
   },
   {
