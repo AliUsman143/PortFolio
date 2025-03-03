@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
+import Image from "next/image";
 const experi = [
   {
     year: "2024 - Present",
@@ -48,6 +49,17 @@ const education = [
     mark: "CGPA: 3.74",
     school: "National Textile University",
   },
+];
+const skills = [
+  { title: "Next.js", src: "/assets/skills/next.svg" },
+  { title: "React.js", src: "/assets/skills/react.svg" },
+  { title: "JavaScript", src: "/assets/skills/js.svg" },
+  { title: "Redux-Toolkit", src: "/assets/skills/redux.png" },
+  { title: "Shadcn", src: "/assets/skills/chadcn.png" },
+  { title: "Tailwind CSS", src: "/assets/skills/tailwind.svg" },
+  { title: "Bootstrap 5", src: "/assets/skills/bot.png" },
+  { title: "HTML", src: "/assets/skills/html.svg" },
+  { title: "CSS", src: "/assets/skills/css.svg" },
 ];
 const about = [
   {
@@ -144,80 +156,21 @@ const Resume = () => {
           Tailwind Css, Flow Bit, Flow Element, Bootstrip5, Html 5, Css . Now, I
           am working on Next Js Projects.
         </p>
-        {/* tooltips  */}
-        <div className="flex flex-wrap  gap-6">
-          <Tooltip title="Next Js" placement="top">
-            <img
-              src="assets/skills/next.svg"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
-          <Tooltip title="React Js" placement="top">
-            <img
-              src="assets/skills/react.svg"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
-          <Tooltip title="JavaScript" placement="top">
-            <img
-              src="assets/skills/js.svg"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
 
-          <Tooltip title="Redux-Toolkit" placement="top">
-            <img
-              src="assets/skills/redux.png"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
-          <Tooltip title="Shadcn" placement="top">
-            <img
-              src="assets/skills/chadcn.png"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
-          <Tooltip title="Tailwind" placement="top">
-            <img
-              src="assets/skills/tailwind.svg"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
-          {/* <Tooltip title="FlowBite" placement="top">
-            <img
-              src="assets/skills/flowbite.png"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip> */}
-          <Tooltip title="Bootstrip5" placement="top">
-            <img
-              src="assets/skills/bot.png"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
-
-          <Tooltip title="html" placement="top">
-            <img
-              src="assets/skills/html.svg"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
-          <Tooltip title="Css" placement="top">
-            <img
-              src="assets/skills/css.svg"
-              alt=""
-              className=" bg-[#232229] rounded-lg shadow-lg h-28 w-28 p-8"
-            />
-          </Tooltip>
+        <div className="flex flex-wrap gap-6">
+          {skills.map((skill, index) => (
+            <Tooltip key={index} title={skill.title} placement="top">
+              <div className="bg-[#232229] rounded-lg shadow-lg p-4">
+                <Image
+                  src={skill.src}
+                  alt={skill.title}
+                  width={80}
+                  height={80}
+                  className="h-20 w-20"
+                />
+              </div>
+            </Tooltip>
+          ))}
         </div>
       </div>
     ),

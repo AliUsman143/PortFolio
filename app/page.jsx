@@ -6,6 +6,7 @@ import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 import IconSocial from "../app/components/ui/IconSocial";
 import { motion } from "framer-motion";
 import Countproject from "../app/components/Countproject";
+import Image from "next/image";
 
 const Page = () => {
   return (
@@ -53,9 +54,11 @@ const Page = () => {
               className="relative flex items-center justify-center"
             >
               {/* Image */}
-              <img
+              <Image
                 src="/assets/ali.png"
                 alt="Ali"
+                width={350}
+                height={350}
                 className="lg:w-[350px] lg:h-[350px] w-[300px] h-[300px] mt-10 mb-10 relative z-10 mix-blend-lighten rounded-full shadow-[0_0_40px_10px_rgba(0,0,255,0.3)]"
               />
 

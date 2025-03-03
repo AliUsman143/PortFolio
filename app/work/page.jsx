@@ -5,9 +5,25 @@ import Link from "next/link";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Tooltip from "@mui/material/Tooltip";
+import Image from "next/image";
 const workData = [
   {
     id: "01",
+    image: "/assets/work/author.png", // Replace with your image path
+    title: "Frontend Project",
+    description:
+      "The website showcases a collection of quotes from famous authors. It offers a user-friendly interface to explore quotes by author.",
+    stack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Tailwind" },
+      { name: "Next Js" },
+    ],
+    live: "",
+    github: "https://github.com/AliUsman143/Author_Website",
+  },
+  {
+    id: "02",
     image: "/assets/work/dawat.png", // Replace with your image path
     title: "Frontend Project",
     description:
@@ -22,18 +38,33 @@ const workData = [
     github: "",
   },
   {
-    id: "02",
+    id: "03",
+    image: "/assets/work/thapa.png", // Replace with your image path
+    title: "Frontend Project",
+    description:
+      "This website appears to be a movie streaming platform called ThapaFlix. It invites users to watch movies together, offering a variety of genres from dramas to action.",
+    stack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Tailwind" },
+      { name: "Next Js" },
+    ],
+    live: "",
+    github: "https://github.com/AliUsman143/thapaflix-movietemplete",
+  },
+  {
+    id: "04",
     image: "/assets/work/voiceflex.png", // Replace with your image path
     title: "Frontend Project",
     description:
       "The platform leverages advanced AI technologies to transform and translate voices across multiple languages with precision and speed. Experience seamless voice-to-voice translations, making global communication effortless and engaging.",
-    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" }],
+    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Tailwind" },{ name: "Next Js" },],
     live: "",
     github: "",
   },
 
   {
-    id: "03",
+    id: "05",
     image: "/assets/work/netflix.png", // Replace with your image path
     title: "Frontend Project",
     description:
@@ -48,7 +79,7 @@ const workData = [
     github: "https://github.com/AliUsman143/Netflix-clone",
   },
   {
-    id: "04",
+    id: "06",
     image: "/assets/work/dev.png", // Replace with your image path
     title: "Frontend Project",
     description:
@@ -58,7 +89,7 @@ const workData = [
     github: "https://github.com/AliUsman143/Devkuns",
   },
   {
-    id: "05",
+    id: "07",
     image: "/assets/work/hugo.png", // Replace with your image path
     title: "Frontend Project",
     description:
@@ -68,7 +99,7 @@ const workData = [
     github: "https://github.com/AliUsman143/Hugoplate_templete",
   },
   {
-    id: "06",
+    id: "08",
     image: "/assets/work/pinwheel.png", // Replace with your image path
     title: "Frontend Project",
     description:
@@ -78,7 +109,7 @@ const workData = [
     github: "https://github.com/AliUsman143/landwind-templete",
   },
   {
-    id: "07",
+    id: "09",
     image: "/assets/work/windland.png", // Replace with your image path
     title: "Frontend Project",
     description:
@@ -87,37 +118,9 @@ const workData = [
     live: "",
     github: "https://github.com/AliUsman143/landwind-templete",
   },
-  {
-    id: "08",
-    image: "/assets/work/thapa.png", // Replace with your image path
-    title: "Frontend Project",
-    description:
-      "This website appears to be a movie streaming platform called ThapaFlix. It invites users to watch movies together, offering a variety of genres from dramas to action.",
-    stack: [
-      { name: "HTML5" },
-      { name: "CSS3" },
-      { name: "Tailwind" },
-      { name: "Next Js" },
-    ],
-    live: "",
-    github: "https://github.com/AliUsman143/thapaflix-movietemplete",
-  },
+  
 
-  {
-    id: "09",
-    image: "/assets/work/author.png", // Replace with your image path
-    title: "Frontend Project",
-    description:
-      "The website showcases a collection of quotes from famous authors. It offers a user-friendly interface to explore quotes by author.",
-    stack: [
-      { name: "HTML5" },
-      { name: "CSS3" },
-      { name: "Tailwind" },
-      { name: "Next Js" },
-    ],
-    live: "",
-    github: "https://github.com/AliUsman143/Author_Website",
-  },
+ 
   {
     id: "10",
     image: "/assets/work/brith.png", // Replace with your image path
@@ -177,10 +180,13 @@ const WorkSection = () => {
           <Slider {...settings}>
             {workData.map((item) => (
               <div key={item.id} className="p-4">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
+                  width={600}
+                  height={400}
                   className="w-full h-full object-cover rounded-lg"
+                  
                 />
               </div>
             ))}
