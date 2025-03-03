@@ -1,6 +1,4 @@
 "use client";
-
-import Button from "../app/components/ui/button";
 import React from "react";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 import IconSocial from "../app/components/ui/IconSocial";
