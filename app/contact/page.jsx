@@ -122,7 +122,7 @@ const page = () => {
           />
           <button
             type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded transition"
+            className="w-full bg-accent hover:bg-accent text-white py-2 rounded transition"
             disabled={loading}
           >
             {loading ? "Sending..." : "Send Message"}
