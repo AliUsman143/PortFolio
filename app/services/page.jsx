@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import { BsArrowDownRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { FaCode, FaBrain, FaPenNib, FaSearch } from "react-icons/fa"; // Icons added
 
@@ -68,12 +66,7 @@ const Services = () => {
               <p className="text-gray-400 mb-4">{item.description}</p>
               <div className="flex justify-between items-center">
                 <div className="border-b border-white/20 w-2/3"></div>
-                {/* <Link
-                  href={item.href}
-                  className="text-white hover:text-accent transition-transform transform hover:scale-110"
-                >
-                  <BsArrowDownRight className="w-10 h-10 border border-gray-600 rounded-full p-2 hover:bg-accent hover:text-primary hover:border-accent transition-all duration-500" />
-                </Link> */}
+               
               </div>
             </div>
           ))}
