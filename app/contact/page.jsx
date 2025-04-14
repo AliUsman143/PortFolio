@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import Link from "next/link";
+
 const info = [
   {
     icon: <FaPhoneAlt />,
@@ -20,7 +21,7 @@ const info = [
     icon: <FaMapMarkedAlt />,
     title: "Address",
     description: "Faisal Town, Chak Jhumra, Faisalabad",
-    path: "https://www.google.com/maps/place/Chak+Jhumra,+Faisalabad,+Pakistan/@31.5678,73.1234,15z", // Google Maps Exact Location
+    path: "https://www.google.com/maps/place/Chak+Jhumra,+Faisalabad,+Pakistan/@31.5678,73.1234,15z",
   },
 ];
 
@@ -54,7 +55,7 @@ const ContactPage = () => {
           : "Something went wrong. Please try again.",
       });
 
-      if (res.success) event.target.reset(); // Reset form only on success
+      if (res.success) event.target.reset();
     } catch (error) {
       setLoading(false);
       Swal.fire({
@@ -66,7 +67,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto">
       <div className="grid lg:grid-cols-2 grid-cols-1 items-center">
         {/* Contact Form */}
         <div className="max-w-[560px] mx-auto bg-[#27272c] p-6 rounded-lg shadow-md">
@@ -119,29 +120,44 @@ const ContactPage = () => {
         </div>
 
         {/* Contact Info Section */}
-        <div className="flex justify-center md:justify-start pl-7 md:py-32 py-6">
-          <ul>
+        <div className="flex justify-center px-4 md:px-0 md:justify-start md:pl-7 py-8 md:py-32">
+          <ul className="w-full max-w-md md:max-w-none space-y-4 md:space-y-6">
             {info.map((item, index) => (
-              <li key={index} className="flex items-center mb-4 gap-6">
-                {/* Clickable Icon */}
-                <div className="border cursor-pointer text-accent bg-white/5 h-12 w-12 flex items-center justify-center rounded-full">
+              <li
+                key={index}
+                className="flex items-start md:items-center gap-4 md:gap-6"
+              >
+                <div className="border cursor-pointer text-accent bg-white/5 h-10 w-10 md:h-12 md:w-12 flex-shrink-0 flex items-center justify-center rounded-full">
                   {item.path.startsWith("/") ? (
-                    <Link href={item.path}>{item.icon}</Link> // Internal Next.js Routing
+                    <Link
+                      href={item.path}
+                      className="flex items-center justify-center w-full h-full"
+                    >
+                      {React.cloneElement(item.icon, {
+                        className: "text-lg md:text-xl",
+                      })}
+                    </Link>
                   ) : (
                     <a
                       href={item.path}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full h-full"
                     >
-                      {item.icon}
-                    </a> // External Links
+                      {React.cloneElement(item.icon, {
+                        className: "text-lg md:text-xl",
+                      })}
+                    </a>
                   )}
                 </div>
 
-                {/* Title & Description */}
-                <div>
-                  <p className="text-gray-500 text-sm">{item.title}</p>
-                  <p className="text-white">{item.description}</p>
+                <div className="flex-1">
+                  <p className="text-gray-500 text-xs md:text-sm">
+                    {item.title}
+                  </p>
+                  <p className="text-white text-sm md:text-base leading-snug">
+                    {item.description}
+                  </p>
                 </div>
               </li>
             ))}

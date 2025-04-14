@@ -1,6 +1,7 @@
-"use clinet";
+"use client";
 import React from "react";
 import CountUp from "react-countup";
+
 const countpro = [
   {
     num: 2,
@@ -15,29 +16,39 @@ const countpro = [
     text: "Technologies masters",
   },
   {
-    num: 100,
+    num: "100+",
     text: "Code commits",
+    isString: true // Add this flag for string values
   },
 ];
+
 const Countproject = () => {
   return (
-    <section>
-      <div className="container mx-auto">
-        <div className="flex flex-wrap gap-6 max-w-[80wv] mx-auto lg:max-w-none">
-          {countpro.map((item, index) => {
-            return (
-              <div className="flex-1 flex gap-4 items-center justify-center lg:justify-start" key={index}>
-                {" "}
-                <CountUp 
-                end={item.num}
-                duration={5}
-                delay={2}
-                className="text-4xl lg:text-6xl font-extrabold "
+    <section className="py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {countpro.map((item, index) => (
+            <div 
+              key={index}
+              className="flex flex-col items-center justify-center p-4 bg-white/10 rounded-lg backdrop-blur-sm"
+            >
+              {item.isString ? (
+                <span className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+                  {item.num}
+                </span>
+              ) : (
+                <CountUp
+                  end={item.num}
+                  duration={5}
+                  delay={2}
+                  className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2"
                 />
-                <p  className={`${item.text.length<15? "max-w-[100px]":"max-w-[150px]"}`}>{item.text}</p>
-              </div>
-            );
-          })}
+              )}
+              <p className="text-sm md:text-base text-center">
+                {item.text}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
