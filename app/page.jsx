@@ -28,8 +28,8 @@ const Page = () => {
 
             <div className="lg:flex-row flex-col flex items-center gap-7">
               <a
-                href="https://drive.google.com/uc?export=download&id=1O09vHl4L3_2gfCVaPPDnqywOaR7UaaeZ"
-                download="My_CV.pdf"
+                href="/assets/files/ali_usman.pdf"
+                download="ali_usman.pdf"
                 className="border-2 rounded-3xl border-accent capitalize bg-primary text-accent hover:bg-accent hover:text-white hover:scale-105 duration-700 px-4 py-2 flex items-center gap-2"
               >
                 Download CV

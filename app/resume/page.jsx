@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import Image from "next/image";
+import { FaEye } from "react-icons/fa";
 const experi = [
   {
     year: "2024 - Present",
@@ -235,15 +236,15 @@ const Resume = () => {
   return (
     <section className="py-5">
       <div className="container mx-auto">
-        {/* Flexbox layout */}
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Tabs Section */}
+          {/* Left Tabs + Button */}
           <div className="flex flex-col gap-4 text-center rounded-xl">
+            {/* Tabs */}
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 lg:w-[26vw] items-center rounded-xl  text-xl ${
+                className={`px-4 py-2 lg:w-[26vw] rounded-xl text-xl ${
                   activeTab === tab.id
                     ? "bg-accent text-white"
                     : "bg-gray-200 text-gray-600 hover:bg-accent hover:text-white"
@@ -252,10 +253,27 @@ const Resume = () => {
                 {tab.label}
               </button>
             ))}
+
+            {/* Download CV Button under tabs */}
+            <div className="mt-8 text-center">
+              <a
+                href="/assets/files/ali_usman.pdf" // ✅ Replace this with your actual file path
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className="bg-accent text-gray-600 px-6 py-3 mt-4"
+                >
+                   <FaEye className="text-xl "/> <span className="ml-3 font-bold">View My CV </span>
+                </Button>
+              </a>
+            </div>
           </div>
 
-          {/* Content Section */}
-          <div className="bg-primary   mx-auto  px-6  rounded-lg">
+          {/* Right Tab Content */}
+          <div className="bg-primary mx-auto px-6 py-4 rounded-lg">
             {tabContent[activeTab]}
           </div>
         </div>
